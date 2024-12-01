@@ -1,10 +1,21 @@
-﻿namespace Lab3Part2
+﻿using System;
+
+class Program
 {
-    internal class Program
+    static void Main()
     {
-        static void Main(string[] args)
+        double x = 0.5;  // x
+        int n = 8;       // Количество рядов
+
+        double sum = 0.0;
+
+        // сумма ряда
+        for (int i = 1; i <= n; i=i+1)
         {
-            Console.WriteLine("Hello, World!");
+            sum += Math.Pow(x, i) / i;
         }
+
+        // результат
+        Console.WriteLine($"Сумма ряда для x = {x} и n = {n}: S = {sum:F6}");
     }
 }
